@@ -5,6 +5,8 @@ import Link from 'next/link'
 import dateformat from "dateformat"
 import Head from 'next/head'
 import { FaCheckCircle } from "react-icons/fa"
+import * as gtag from '../lib/gtag'
+
 
 export default function Campaign({ data }) {
 
@@ -31,6 +33,10 @@ export default function Campaign({ data }) {
         fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/subscribers`, options).
             then(res => res.json()).
             then(response => setIsSubmitted(true)).
+            then(gtag.event({
+                action: 'submit_form',
+                category: 'Contact',
+                label: email,})).
             catch(error => console.log('error', error)).
             finally(() => {
                 setIsSubmitting(false)
