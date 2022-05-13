@@ -1,0 +1,175 @@
+.wrapper {
+    height: 100vh;
+    background-color: #001101;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.main {
+    background-image: url("https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/arnold-francisca-f77Bh3inUpE-unsplash.jpg");
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #001101;
+    opacity: 0.3;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    z-index: 2;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+}
+
+.contents {
+    width: 100%;
+    padding: 7rem 10rem;
+    color: #ffffff;
+    z-index: 2;
+    position: absolute;
+}
+
+.img {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.grid {
+    display: flex;
+}
+
+.left {
+    width: 50%;
+    color: white;
+}
+
+.right {
+    width: 50%;
+}
+
+.rightContents {
+    margin-left: 6rem;
+    color: white;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.input {
+    font-size: 15px;
+    color: #444991;
+    background: #ffffff;
+    padding: 12px;
+    border: 1px solid #e4e4e4;
+    -webkit-box-flex: 1;
+    line-height: 1.5;
+    width: 100%;
+    -webkit-appearance: none;
+    border-width: 1px;
+    font-weight: 400;
+    height: 60px;
+    border-color: white;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    color: #e4e4e4;
+    background-color: #f44991;
+    border-radius: 0;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    transition: all ease-in;
+    -webkit-transition: all ease-in;
+    -moz-transition: all ease-in;
+    -ms-transition: all ease-in;
+    -o-transition: all ease-in;
+}
+
+.button:hover {
+    background-color: #f22222;
+}
+
+.consent {
+    font-size: 14px;
+    color: aliceblue;
+}
+
+.thankyou {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 12px;
+}
+
+.message {
+    padding-left: 12px;
+    color: #000;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .consent {
+        color: #e4e4e4;
+        font-size: 12px;
+    }
+
+    .contents {
+        padding: 2rem 4rem;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        margin-top: 12px;
+    }
+
+    .rightContents {
+        margin-left: 0rem;
+        flex: 1;
+        align-self: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .contents {
+        padding: 1rem 2rem;
+    }
+    .description {
+        display: none;
+    }
+}
